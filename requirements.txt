@@ -18,7 +18,6 @@ torch==2.1.1
 # NLP preprocessing
 nltk==3.8.1
 spacy==3.7.2
-re==2023.6.3
 
 # Machine Learning
 scikit-learn==1.3.2
@@ -41,11 +40,9 @@ ipykernel==6.27.1
 # Utilities
 python-dotenv==1.0.0
 tqdm==4.66.1
-datetime==5.4
 pytz==2023.3
 
 # Data storage
-sqlite3==3.42.0
 
 # Configuration management
 configparser==6.0.0
