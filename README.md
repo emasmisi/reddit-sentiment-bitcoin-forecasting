@@ -16,7 +16,7 @@ Does what people say on Reddit help predict Bitcoin's next move? This project co
 ## Data
 | Source | Detail |
 |---|---|
-| Bitcoin OHLCV | Hourly, Sep 2023 – Aug 2025, **17,519 observations** |
+| Bitcoin OHLCV | Hourly, Sep 2023 to Aug 2025, **17,519 observations** |
 | Reddit | 10 subreddits (r/Bitcoin, r/CryptoCurrency, r/BitcoinMarkets, r/btc, r/CryptoMarkets, r/investing, r/stocks, …), **~85k texts**, aggregated into hourly UTC buckets |
 | Final dataset | 17,519 rows × **105 features** (lags, rolling stats on 3h/6h/24h windows, social volume, ~35 sentiment variables) |
 
@@ -28,7 +28,7 @@ Reddit API (PRAW) ─┐                          ┌─ VADER compound
                    ├─► dedup + UTC bucketing ─┤                    ─► feature engineering ─► models ─► evaluation
 yfinance (BTC 1h) ─┘                          └─ FinBERT (pos/neg/neu)   (lags, rolling,      Naïve     RMSE, MAE,
                                                                           volumes)            ARIMA     directional acc.,
-                                                                                              LSTM      Diebold–Mariano,
+                                                                                              LSTM      Diebold-Mariano,
                                                                                               XGBoost   Model Confidence Set
 ```
 
